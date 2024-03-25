@@ -33,8 +33,8 @@ public class ToDoController {
         System.out.println("Init Data");
     }
 
-    @GetMapping("/test")
-    public String test() {
+    @GetMapping("/testTODO")
+    public String testTODO() {
         return "ToDo app is up and running!";
     }
 
