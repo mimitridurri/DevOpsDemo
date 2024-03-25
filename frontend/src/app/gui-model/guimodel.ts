@@ -90,7 +90,7 @@ export class GuiModel {
                 {
                     "id": "ModuleForm",
                     "title": {default: "Module"},
-                    "url": "/todo",
+                    "url": "/moduleItem",
                     "formFieldList": [
                         {
                             "id": "title",
@@ -207,7 +207,7 @@ export class GuiModel {
                             "icon": "fa-solid fa-ruler-horizontal",
                             "color": "pumpkin",
                             "search": true,
-                            "url": "/todo",
+                            "url": "/moduleItem",
                             "form": {
                                 "form": "ToDoForm"
                             }

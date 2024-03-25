@@ -25,9 +25,12 @@ public class ModuleItemController {
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
-        this.moduleItems.put(1,new ModuleItem(1, "Neuer Job", "5 DevOps Engineers einstellen"));
+        this.moduleItems.put(1,new ModuleItem(1, "Neuer Job", "11 DevOps Engineers einstellen"));
         this.moduleItems.put(2,new ModuleItem(1, "Zweiter Job", "6 DevOps Engineers einstellen"));
         System.out.println("Init Data");
+
+
+
     }
 
     @GetMapping("/testmoduleItem")
@@ -66,11 +69,12 @@ public class ModuleItemController {
     }
 
     @PostMapping("/services/moduleItem")
-    public void createModuleItem(int i, @RequestBody ModuleItem moduleItem) {
+    public void createModuleItem(@RequestBody ModuleItem moduleItem) {
         var newId = this.moduleItems.keySet().stream().max(Comparator.naturalOrder()).orElse(0) + 1;
         moduleItem.setId(newId);
         this.moduleItems.put(newId, moduleItem);
     }
+
 
     @PutMapping("/services/moduleItem/{id}")
     public void updateModuleItem(@PathVariable Integer id, @RequestBody ModuleItem moduleItem) {
