@@ -26,13 +26,13 @@ public class ModuleItemController {
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
         this.moduleItems.put(1,new ModuleItem(1, "Neuer Job", "5 DevOps Engineers einstellen"));
-
+        this.moduleItems.put(2,new ModuleItem(1, "Zweiter Job", "6 DevOps Engineers einstellen"));
         System.out.println("Init Data");
     }
 
     @GetMapping("/testmoduleItem")
     public String testModuleItem() {
-        return "ModuleItem app is up and running!";
+        return "ModuleItem app is up and running! HI!";
     }
 
     @GetMapping("/moduleItem/services/ping")
