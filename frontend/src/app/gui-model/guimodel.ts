@@ -3,7 +3,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024",
+            "title": "Dimitri Murris DevOpsDemo FS2024",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -58,7 +58,7 @@ export class GuiModel {
                     "url": "/todo",
                     "formFieldList": [
                         {
-                            "id":   "title",
+                            "id": "title",
                             "type": "text",
                             "name": { default: "Titel" },
                             "required": true,
@@ -71,6 +71,41 @@ export class GuiModel {
                             "newRow": true,
                             "maxLength": 4000,
                             "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "ModuleForm",
+                    "title": {default: "Module"},
+                    "url": "/todo",
+                    "formFieldList": [
+                        {
+                            "id": "title",
+                            "type": "text",
+                            "name": { default: "Name" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": { default: "Beschreibung" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 8,
                             "width": 2
                         },
                         {
@@ -102,8 +137,17 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "ToDo-List" },
                             "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "color": "blue",
                             "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Dimitris ToDo-Liste" },
+                            "icon": "fa-solid fa-ghost",
+                            "color": "purple",
+                            "page": "modulePage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -117,19 +161,19 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": { default: "Neues ToDo"},
+                            "name": { default: "Neues ToDo" },
                             "icon": "fa-user",
                             "color": "green",
                             "width": 2,
-                            "form" : {
-                                "form" : "ToDoForm"
+                            "form": {
+                                "form": "ToDoForm"
                             }
                         },
                         {
                             "type": "list",
                             "name": "ToDo",
-                            "icon": "fa-user",
-                            "color": "wet-asphalt",
+                            "icon": "fa-solid fa-eye",
+                            "color": "pink",
                             "search": true,
                             "url": "/todo",
                             "form": {
@@ -138,6 +182,39 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "modulePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                            "color": "yellow",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Dimitris neues Modul" },
+                            "icon": "fa-solid fa-crosshairs",
+                            "color": "magenta",
+                            "width": 2,
+                            "form": {
+                                "form": "ModuleForm"
+
+                            }
+
+                        },
+                        {
+                            "type": "list",
+                            "name": "ToDo",
+                            "icon": "fa-solid fa-ruler-horizontal",
+                            "color": "pumpkin",
+                            "search": true,
+                            "url": "/todo",
+                            "form": {
+                                "form": "ToDoForm"
+                            }
+                        }
+                    ]
+                },
+                
             ]
         }
     };
