@@ -25,11 +25,11 @@ public class ModuleItemController {
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
-        this.moduleItems.put(1,new ModuleItem(1, "Neuer Job", "11 DevOps Engineers einstellen"));
-        this.moduleItems.put(2,new ModuleItem(1, "Zweiter Job", "6 DevOps Engineers einstellen"));
-        System.out.println("Init Data");
-
-
+        this.moduleItems.put(1,new ModuleItem(1, "Neuer Job", "5 DevOps Engineers einstellen"));
+        this.moduleItems.put(2,new ModuleItem(2, "Geschäftsleitung", "Mit Präsentation von DevOps überzeugen"));
+        this.moduleItems.put(3,new ModuleItem(3, "Unit Tests", "Neues Projekt mit Unit Tests starten"));
+        this.moduleItems.put(4,new ModuleItem(4, "Deployment", "Jede Woche!"));
+        System.out.println("Init Data ModuleItemController");
 
     }
 
@@ -74,7 +74,6 @@ public class ModuleItemController {
         moduleItem.setId(newId);
         this.moduleItems.put(newId, moduleItem);
     }
-
 
     @PutMapping("/services/moduleItem/{id}")
     public void updateModuleItem(@PathVariable Integer id, @RequestBody ModuleItem moduleItem) {
