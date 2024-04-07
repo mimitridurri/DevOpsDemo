@@ -17,5 +17,7 @@ public class RomanNumerals {
         //Assertions.assertEquals("IV", romanNumerals.toRoman(4));
         Assertions.assertEquals("V", romanNumerals.toRoman(5));
         Assertions.assertEquals("VI", romanNumerals.toRoman(6));
+        Assertions.assertEquals("VII", romanNumerals.toRoman(7));
+        Assertions.assertEquals("VIII", romanNumerals.toRoman(8));
     }
 }
