@@ -1,9 +1,10 @@
 package ch.zhaw.iwi.devops.romanNumerals;
 
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RomanNumeralsKataTest {
     @Test
     public void convertToRoman() {
-        assertThat(RomanNumeralsKata.toRoman(1)).isEqualTo("I");
+        assertEquals("I", RomanNumeralsKata.toRoman(1));
+    }
 }
