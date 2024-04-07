@@ -24,6 +24,7 @@ public class RomanNumeralsTest {
         // Adding more test cases for fun
         Assertions.assertEquals("L", romanNumerals.toRoman(50));
         Assertions.assertEquals("C", romanNumerals.toRoman(100));
+        Assertions.assertEquals("CI", romanNumerals.toRoman(101));
 
         Assertions.assertEquals("XI", romanNumerals.toRoman(11));
         Assertions.assertEquals("XXX", romanNumerals.toRoman(30));
