@@ -3,6 +3,7 @@ package ch.zhaw.iwi.devops.romanNumerals;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ch.zhaw.iwi.devops.romanNumerals.RomanNumeralsConverter;
 
 
 public class RomanNumerals {
@@ -19,7 +20,7 @@ public class RomanNumerals {
         Assertions.assertEquals("VI", romanNumerals.toRoman(6));
         Assertions.assertEquals("VII", romanNumerals.toRoman(7));
         Assertions.assertEquals("VIII", romanNumerals.toRoman(8));
-        //Assertions.assertEquals("IX", romanNumerals.toRoman(9));
+        Assertions.assertEquals("IX", romanNumerals.toRoman(9));
         Assertions.assertEquals("X", romanNumerals.toRoman(10));
     }
 }

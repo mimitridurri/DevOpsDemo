@@ -13,13 +13,6 @@ public class RomanNumeralsConverter {
             }
         }
 
-
-        if (input >= 5) {
-            roman.append("V") ;
-            input -= 5;
-            
-        }
-
         for (int index = 0; index < input; index++) {
             roman.append("I");
         }
@@ -30,6 +23,7 @@ public class RomanNumeralsConverter {
     
     private enum Numeral{
         TEN (10, "X"),
+        NINE (9, "IX"),
         FIVE (5, "V"),
         FOUR (4, "IV");
     
