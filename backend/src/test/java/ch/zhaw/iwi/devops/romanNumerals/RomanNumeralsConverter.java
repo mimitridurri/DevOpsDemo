@@ -5,8 +5,9 @@ public class RomanNumeralsConverter {
     public Object toRoman(int i) {
         StringBuilder roman = new StringBuilder();
 
-        if (i == 5) {
-            return "V";
+        if (i >= 5) {
+            roman.append("V") ;
+            i -= 5;
             
         }
 
