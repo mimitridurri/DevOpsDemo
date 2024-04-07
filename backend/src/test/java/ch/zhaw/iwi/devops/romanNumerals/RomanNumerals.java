@@ -3,7 +3,6 @@ package ch.zhaw.iwi.devops.romanNumerals;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ch.zhaw.iwi.devops.romanNumerals.RomanNumeralsConverter;
 
 
 public class RomanNumerals {

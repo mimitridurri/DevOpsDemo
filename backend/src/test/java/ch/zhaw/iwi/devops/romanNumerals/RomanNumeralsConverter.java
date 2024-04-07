@@ -5,27 +5,22 @@ public class RomanNumeralsConverter {
     public Object toRoman(int input) {
         StringBuilder roman = new StringBuilder();
 
-
         for (Numeral numeral : Numeral.values()) {
-            if (input >= numeral.arabic) {
+            while (input >= numeral.arabic) {
                 roman.append(numeral.roman);
                 input -= numeral.arabic;
             }
         }
-
-        for (int index = 0; index < input; index++) {
-            roman.append("I");
-        }
     
         return roman.toString();
-    
     }
     
     private enum Numeral{
         TEN (10, "X"),
         NINE (9, "IX"),
         FIVE (5, "V"),
-        FOUR (4, "IV");
+        FOUR (4, "IV"),
+        ONE (1, "I");
     
         private final int arabic;
         private final String roman;
