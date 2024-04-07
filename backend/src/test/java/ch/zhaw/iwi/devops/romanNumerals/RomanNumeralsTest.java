@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-public class RomanNumerals {
+public class RomanNumeralsTest {
     
     @Test
     public void romanNumerals1() {
