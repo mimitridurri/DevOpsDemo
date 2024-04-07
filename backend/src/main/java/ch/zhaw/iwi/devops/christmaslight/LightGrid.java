@@ -4,7 +4,11 @@ public class LightGrid {
 
     public void turnOn(CoordinatePair coordinatePair) {
         
-        
+
+    }
+
+    public Object getLight(int row, int col) {
+        return new Light();
     }
 
 }
