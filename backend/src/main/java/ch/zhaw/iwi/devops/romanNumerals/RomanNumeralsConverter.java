@@ -16,6 +16,7 @@ public class RomanNumeralsConverter {
     }
     
     private enum Numeral{
+        
         TEN (10, "X"),
         NINE (9, "IX"),
         FIVE (5, "V"),
