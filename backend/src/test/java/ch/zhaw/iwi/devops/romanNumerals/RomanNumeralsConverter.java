@@ -3,13 +3,14 @@ package ch.zhaw.iwi.devops.romanNumerals;
 public class RomanNumeralsConverter {
 
     public Object toRoman(int i) {
-        if (i == 2) {
-            return "II";
+        StringBuilder roman = new StringBuilder();
+
+        for (int index = 0; index < i; index++) {
+            roman.append("I");
         }
-        if (i == 3) {
-            return "III";
-        }
-        return "I";
+    
+        return roman.toString();
+    
     }
 
 }
