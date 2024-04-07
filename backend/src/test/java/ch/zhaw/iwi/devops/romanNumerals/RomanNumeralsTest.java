@@ -23,6 +23,7 @@ public class RomanNumeralsTest {
         Assertions.assertEquals("X", romanNumerals.toRoman(10));
         // Adding more test cases for fun
         Assertions.assertEquals("L", romanNumerals.toRoman(50));
+        A
 
         Assertions.assertEquals("XI", romanNumerals.toRoman(11));
         Assertions.assertEquals("XXX", romanNumerals.toRoman(30));
