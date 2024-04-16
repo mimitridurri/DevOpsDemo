@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @CrossOrigin
 @RestController
 public class ModuleItemController {
 
     private Map<Integer, ModuleItem> moduleItems = new HashMap<>();
-
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
@@ -63,6 +63,7 @@ public class ModuleItemController {
         }
         return result;
     }
+    
 
     @GetMapping("/services/moduleItem/{key}")
     public ModuleItem getModuleItem(@PathVariable Integer key) {
