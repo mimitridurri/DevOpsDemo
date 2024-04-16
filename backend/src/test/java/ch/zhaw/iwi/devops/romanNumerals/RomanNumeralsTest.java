@@ -28,5 +28,8 @@ public class RomanNumeralsTest {
 
         Assertions.assertEquals("XI", romanNumerals.toRoman(11));
         Assertions.assertEquals("XXX", romanNumerals.toRoman(30));
+
+        //Added for SonarQube Test
+        Assertions.assertEquals("M", romanNumerals.toRoman(1000));
     }
 }
