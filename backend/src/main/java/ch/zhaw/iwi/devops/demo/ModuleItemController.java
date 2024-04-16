@@ -21,7 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ModuleItemController {
 
-    private Map<Integer, ModuleItem> moduleItems = new HashMap<Integer, ModuleItem>();
+    private Map<Integer, ModuleItem> moduleItems = new HashMap<>();
+
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
