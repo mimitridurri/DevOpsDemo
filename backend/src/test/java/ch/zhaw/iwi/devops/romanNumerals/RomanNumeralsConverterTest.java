@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-public class RomanNumeralsTest {
+public class RomanNumeralsConverterTest {
     
     @Test
-    public void romanNumerals1() {
+    public void romanNumerals() {
         RomanNumeralsConverter romanNumerals = new RomanNumeralsConverter();
 
         Assertions.assertEquals("I", romanNumerals.toRoman(1));
@@ -29,7 +29,8 @@ public class RomanNumeralsTest {
         Assertions.assertEquals("XI", romanNumerals.toRoman(11));
         Assertions.assertEquals("XXX", romanNumerals.toRoman(30));
 
-        
+        // added for Test Result should fail
+        Assertions.assertEquals("M", romanNumerals.toRoman(1000));
         
     }
 }
