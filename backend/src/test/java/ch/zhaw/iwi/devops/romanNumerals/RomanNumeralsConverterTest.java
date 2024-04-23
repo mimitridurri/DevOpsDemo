@@ -29,8 +29,6 @@ public class RomanNumeralsConverterTest {
         Assertions.assertEquals("XI", romanNumerals.toRoman(11));
         Assertions.assertEquals("XXX", romanNumerals.toRoman(30));
 
-        // added for Test Result should fail
-        Assertions.assertEquals("M", romanNumerals.toRoman(1000));
-        
+
     }
 }
