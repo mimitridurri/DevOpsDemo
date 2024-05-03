@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo test'
+                sh 'Changes I made on GitHub'
             }
         }
         stage('Deploy') {
