@@ -11,11 +11,10 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'echo Checking out the code...'
-                        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: env.REPO_URL]])
+                        echo 'Checking out the code...'
+                        checkout scm
                     } catch (Exception e) {
                         echo "Checkout failed: ${e}"
-                        currentBuild.result = 'FAILURE'
                         error "Stopping build."
                     }
                 }
@@ -26,7 +25,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'echo Running tests...'
+                        echo 'Running tests...'
                         // Add your testing commands here
                     } catch (Exception e) {
                         echo "Test failed: ${e}"
@@ -34,7 +33,7 @@ pipeline {
                     }
                 }
                 echo 'Tests completed.'
-                echo "Changes detected on branch: \${GIT_COMMIT}" // Uses Jenkins environment variable
+                echo "Changes detected on branch: ${GIT_COMMIT}"
             }
         }
         
@@ -45,11 +44,11 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh "echo Deploying to ${env.DEPLOYMENT_ENV}..."
+                        echo "Deploying to ${env.DEPLOYMENT_ENV}..."
                         // Add your deploy commands here
                     } catch (Exception e) {
                         echo "Deploy failed: ${e}"
-                        currentBuild.result = 'FAILURE'
+                        error "Stopping build."
                     }
                 }
             }
