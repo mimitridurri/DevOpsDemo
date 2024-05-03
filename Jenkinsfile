@@ -43,7 +43,7 @@ pipeline {
                     try {
                         echo "Deploying to ${env.DEPLOYMENT_ENV}..."
                         // Add actual deployment commands below, replace with your specific commands
-                        sh 'deploy-command'
+                        sh 'echo deploy'
                         echo 'Deployment successful!'
                     } catch (Exception e) {
                         echo "Deploy failed: ${e}"
