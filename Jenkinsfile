@@ -37,23 +37,22 @@ pipeline {
             }
         }
         
-        stage('Deploy') {
-            when {
-                branch 'main'
-            }
-            steps {
-                script {
-                    try {
-                        echo "Deploying to ${env.DEPLOYMENT_ENV}..."
-                        // Add your deploy commands here
-                    } catch (Exception e) {
-                        echo "Deploy failed: ${e}"
-                        error "Stopping build."
-                    }
-                }
+stage('Deploy') {
+    steps {
+        script {
+            try {
+                echo "Deploying to ${env.DEPLOYMENT_ENV}..."
+                // Add actual deployment commands below, replace with your specific commands
+                sh 'deploy-command'
+                echo 'Deployment successful!'
+            } catch (Exception e) {
+                echo "Deploy failed: ${e}"
+                error "Stopping build."
             }
         }
     }
+}
+
 
     post {
         always {
